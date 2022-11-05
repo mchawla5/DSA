@@ -26,7 +26,6 @@ def locateCard(cards, query):
     while lo <= hi:
         mid = (lo+hi)//2
         result = testLocation(cards, query, mid)
-
         if result == 'found':
             return mid
         elif result == 'left':
