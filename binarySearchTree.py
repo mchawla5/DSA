@@ -109,6 +109,20 @@ def findNode(node, key):
     if key > node.key:
         return findNode(node.right, key)
 
+# update a node in BST
+def updateNode(node, key, value):
+    node = findNode(node, key)
+    node.value = value
+
+# get length
+def treeSize(root, count):
+    if root is None:
+        return count
+    count = count+1
+    count = treeSize(root.left, count)
+    count = treeSize(root.right, count)
+    return count
+
 # Check if tree is balanced
 def isBalanced(node):
     if node is None:
@@ -126,5 +140,6 @@ if __name__ == "__main__":
     printInorder(root)
     print(isBst(root))
     node = findNode(root, 12)
-    print(node.key, node.value, node.parent.key)
+    #print(node.key, node.value, node.parent.key)
     print(isBalanced(root))
+    print(treeSize(root, 0))
