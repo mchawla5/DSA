@@ -1,6 +1,10 @@
 '''
 MERGE SORT
 Uses divide and conquer to create subarrays, then they are sorted and merged back again
+
+SOLUTION:
+    |_ Time Complexity - O(nlogn)
+    |_ Space Complexity - O(n)
 '''
 
 def merge(nums1, nums2):
